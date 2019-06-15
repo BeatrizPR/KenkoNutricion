@@ -1,0 +1,485 @@
+@font-face {
+	font-family: redactedFont;
+	src:url('fuentes/redacted.script-light.ttf');
+}	
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.container{
+	margin: 10px !important;
+}
+
+header, footer { 
+	height:50px;
+}
+body{
+	min-height: 700px;
+    padding-top: 70px;
+}
+.jubotron{
+	margin-bottom:0% !important;
+	padding-top: 70px !important;
+}
+
+/*  CENTRAR  */
+.center{
+	text-align: center !important;
+	margin: 0 auto;
+}
+/* NAV  */
+nav.navbar{
+	background-color: #79c99e !important;
+	color: #394032 !important;
+}
+
+button:focus {
+    outline: 0;
+}
+
+/* ANCHURA LOGIN  a la DERECHA */
+.navbar .dropdown-menu .form-control {
+    width: 200px;
+
+}
+.navbar .dropdown button{
+	background-color: #79c99e !important;
+} 
+/* estilo botones de la derecha del nav cuando  :hover*/
+.navbar .dropdown:hover button{
+	background-color: #cfee9e !important;
+} 
+nav:hover li button{
+	background-color: #cfee9e !important;
+}
+.navbar .nav-item .nav-link:hover{
+	color: #cfee9e !important;
+}
+/*BOTONES VERDES */
+.btn{
+	background-color:  #79c99e;
+	color:#587b7f !important;
+}
+
+.titulo{
+	color: #79c99e;
+}
+
+/* Para los iconos */
+span.icon {
+  font-family: FontAwesome;
+} 
+
+#centerMain{
+	margin-top:-5%;
+}
+main {
+	padding:10px;
+	position: relative;
+
+}
+.imageResize{
+	max-width: 70%;
+	margin: 0 auto;
+	display: block;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input { caret-color: red;  }
+
+.page-link{
+	color: #587b7f !important;
+}
+/* Estilo del icono EDITAR - LAPIZ */
+.fa-pencil{
+	color: #5ca87f !important;
+}
+.fa-pencil:hover{
+	color: #345543 !important;
+}
+/* Estilo del icono BORRAR   - PAPELERA */
+.fa-trash-alt{
+	color: #5ca87f !important;
+}
+.fa-trash-alt:hover{
+	color: #c7e7d5 !important;
+}
+
+/*USERPAGE - ESTILO DE LOS CUADRADOS CON ICONOS */
+.cardUserpage{
+	width: 200px !important; 
+	height: 250px !important;
+}
+
+.cardIma1{
+	background-color: rgb(197, 241, 233) !important;
+}
+
+.cardIma2{
+	background-color: rgb(192, 240, 170) !important;
+}
+
+.cardIma3{
+	background-color: rgb(247, 234, 160) !important;
+}
+
+.cardIma4{
+	background-color: rgb(234, 196, 243) !important;
+}
+/* FORMULARIO  - REGISTRO  */
+.registro-formulario{
+	
+	background-image: url(https://images.unsplash.com/photo-1498579809087-ef1e558fd1da?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	font-family: 'Numans', sans-serif;
+
+}
+
+.card-register{
+	height: 650px;
+	margin-top: auto;
+	margin-bottom: auto;
+	width: 600px;
+	background-color: rgba(0,0,0,0.5) !important;
+	}
+	
+	.input-group-prepend label{
+		width: 160px;
+		color: #ffffff;
+		border:0 !important;
+		border-radius: 5px !important; 
+		}
+	#registro input.form-control{
+		border-radius: 5px !important;
+	}
+	.card-header.register h3{
+	color: white;
+	}
+		
+	.register_btn{
+	color: black;
+	background-color: #FFC312;
+	width: 100px;
+	}
+	
+	.register_btn:hover{
+	color: black;
+	background-color: white;
+	}
+.register{
+	margin-top: 10px !important; 
+}
+.person{
+	margin-top: 10px !important; 
+	width:45px;
+	height: 45px;
+	fill: rgb(231, 188, 107); 
+  }
+  .person{
+	animation: 1s person .5s 3;
+	animation-iteration-count: infinite;
+	animation-timing-function: step-start;
+  }
+  .personRuning{
+	margin-top: 10px !important; 
+	width:45px;
+	height: 45px;
+	fill: rgb(231, 188, 107); 
+	opacity: 0;
+  }
+  .personRuning{
+	animation: 1s personRuning .5s 3;
+	animation-iteration-count: infinite;
+	animation-timing-function: step-start;
+  }
+
+  @keyframes opacity{
+	0% {
+	  opacity: 0;
+	}  
+	100% {
+	  opacity: 1;
+	}
+  }
+  @keyframes person{
+	0% {
+
+	}
+	50% {
+		opacity: 0;
+
+	}
+	100% {
+
+	}
+  }
+
+  @keyframes personRuning{
+	0% {
+
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+	}
+  }
+
+/* ENLACES dentro del formulario color - VERDE */
+.form a{
+	color: #79c99e;
+}
+.form:hover a{
+	color: #dfcc74;
+}
+form button{
+	border-color: #79c99e !important;
+	color: #79c99e !important;
+}
+.btn:hover {
+	background-color: #47a772 !important;
+	color: white !important;
+}
+
+/* Estilo de la confirmación de borrado */
+.btn a{
+	color: #414240;
+}
+.btn-borrar:hover {
+	background-color: #f03b3b !important;
+	color: white !important;
+}
+
+.btn-cancelar:hover{
+	background-color: #47a772 !important;
+	color: white !important;
+}
+
+/* randomfood */
+
+.randomImage{
+	max-width: 50%;
+	max-height: 50%;
+	width:40%; 
+	height:40%;
+}
+
+/*FOOTER */
+.footer { 
+	position: relative;
+   	left: 0;
+	bottom: 0;
+   	width: 100%;
+   	color: black;
+   	text-align: center;
+}
+
+.footer a{
+	color: #79c99e;
+	font-weight: bold;
+}
+.footer:hover a{
+	color: #dfcc74;
+}
+#slider{
+	text-align: center;
+}
+
+
+/* Estilo de la paginación final */
+
+.page-item .active{
+	background-color: #93e4b9 !important;
+}
+
+/* Tabla del administrador de usuarios */
+
+/*  						ocultar filas de modificar y borrar */
+.hiddenRow {
+	padding: 0 !important;
+
+}
+
+/* style table menus */
+.menuGreen{
+	background-color: #79c99e !important;
+	color:  #394032 !important;
+}
+
+/* RECETAS */
+
+.recipe{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: rgb(59, 41, 27) !important;
+}
+
+/* Objetivo */
+
+/*  tabla objetivo cumplido */
+.table-bordered > tbody > tr> td.noBorder{
+	border:none !important;
+border-right: none !important;
+border-left: none !important;
+border-top: none !important;
+border-right-style: none !important;
+border-left-style: none !important;
+}
+.table-bordered{
+  border:none !important;
+}
+
+/* chart objetivo */
+.chartContainer{
+	height: 0;
+	
+}
+
+/*Category */
+/* boton de categoria, quitar estilo */
+button.btnNonStyle{
+	background: none !important;
+  border: 0 !important;
+  color: inherit !important;
+  cursor: default; 
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0 !important;
+  
+}
+.btnNonStyle:hover {
+	background-color:none !important;
+	cursor: pointer;
+	padding: 0 !important;
+} 
+.btnNonStyle:active{
+	border: none !important;
+}
+div.alert-info:hover{
+	background-color:#79c99e !important;
+	border: none !important;
+	color: white !important;
+}
+
+/* Paginado */
+
+#activePagination a{
+	background-color:#66cf97 !important;
+	border: none !important;
+}
+
+/* Login */
+
+.loginBody{
+	/* background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg'); */
+	background-image: url('../../assets/heather-barnes-1443935-unsplash.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	font-family: 'Numans', sans-serif;
+	margin-top: 115px;
+	}
+
+.card-login{
+	height: 370px;
+	margin-top: auto;
+	margin-bottom: auto;
+	width: 400px;
+	background-color: rgba(0,0,0,0.5) !important;
+	}
+	
+	
+	.card-header.login h3{
+	color: white;
+	}
+	
+	.input-group-prepend span{
+	width: 50px;
+	background-color: #FFC312;
+	color: black;
+	border:0 !important;
+	}
+	
+	input:focus{
+	outline: 0 0 0 0  !important;
+	box-shadow: 0 0 0 0 !important;
+	
+	}
+	
+	.login_btn{
+	color: black;
+	background-color: #FFC312;
+	width: 100px;
+	}
+	
+	.login_btn:hover{
+	color: black;
+	background-color: white;
+	}
+	
+	.links{
+	color: white;
+	}
+	.linkSign{
+		color: greenyellow;
+	}
+	.linkSign:hover{
+		color:mediumspringgreen;
+	}
+	
+	.links a{
+	margin-left: 4px;
+	}
+
+	/* CONTACTO  */
+
+	.clock{
+		width:55px;
+		height: 30px;
+		fill: rgb(235, 198, 80); 
+	  }
+	  .clock{
+		transform: rotate(15deg);
+		animation: 1s clock .5s 3;
+		animation-iteration-count: infinite;
+		animation-timing-function: step-start;
+	  }
+	  @keyframes opacity{
+		0% {
+		  opacity: 0;
+		}  
+		100% {
+		  opacity: 1;
+		}
+	  }
+	  @keyframes clock{
+		0% {
+		  transform: rotate(15deg);
+		}
+		50% {
+		  transform: rotate(0);
+		}
+		100% {
+		  transform: rotate(15deg);
+		}
+	  }
+
+	  /* ESTILO MODALES */
+
+	  .modal-header{
+		  background-color: #47a772 !important;
+		  border-bottom: none !important;
+	  }
+
+	  .modalStyle{
+		  font-size: 20px;
+	  }
