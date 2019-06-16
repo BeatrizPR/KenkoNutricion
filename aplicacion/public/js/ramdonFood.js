@@ -1,4 +1,4 @@
-
+//function getRandomFood(){
     var foods = [
         {title: 'Arroz blanco', link: 'https://images.unsplash.com/photo-1541832676-9b763b0239ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=921&q=80'},
         {title: 'Pollo al limón con verduras a la plancha', link:'https://images.unsplash.com/photo-1532550907401-a500c9a57435?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'},
@@ -22,15 +22,41 @@
         {title: 'Pizza de tomate, queso, pimiento y cebolla', link:'https://images.unsplash.com/photo-1507273026339-31b655f3752d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80'},
         {title: 'Berenjena rellena con carne, cebolla, zanahoria, champiñones y queso', link:'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80'},
         {title: 'Tostada de cebolla, pimiento, tomate, pollo y queso', link:'https://images.unsplash.com/photo-1505575967455-40e256f73376?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'},
-
+        //{title: '', link:''}
     ];
+    //Math.random();
 
     function getRandomToEat(){
         var randomToEat = foods[Math.floor(Math.random()* foods.length)];
 
+        // usando javascript con innerHTML
+        //document.getElementById('foodShow').innerHTML = randomToEat.title;
+        //document.getElementById('photo').href = randomToEat.link;
+
+        // con jquery
         $('#foodShow').html(randomToEat.title);
         $('#photo').attr('src', randomToEat.link);
-
+        //console.log(randomToEat.link);
     }
 
    
+
+//     const anyToEat = function(item){
+//         randomToEat = foods[Math.floor(Math.random()* foods.length)]
+
+//         item.innerHTML = randomToEat.title
+//         item.href = randomToEat.link
+//     }
+   
+//    anyToEat(document.querySelector('.NombreClase donde pondré comida'));
+
+
+
+//    return anyToEat;
+// }
+
+
+
+    // $.on(click, function({
+    //     anyToEat(foods);
+    // }));

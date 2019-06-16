@@ -48,7 +48,7 @@ class Register extends Controller
                 } else {
                     // registro al usuario
                     if ($this->model->insertUser(['usr' => $usr, 'pwd' => $pwd, 'ema' => $ema, 'nom' => $nom, 'ape' => $ape, 'sex' => $sex, 'alt' => $alt, 'peso'=> $peso])) {
-                        $message = 'Te damos la bienvenidad: ' . $usr. '<br> Inicia sesión para terminar correctamente el registro. ';
+                        $message = 'Te damos la bienvenidad: ' . $usr. '<br> Ya puedes iniciar sesión. ';
                         //session_start();
                         $_SESSION['user'] = $_POST['usr'];
                     } else {

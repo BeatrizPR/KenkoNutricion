@@ -12,16 +12,9 @@
 
     if (isset($_SESSION['usr'])) :
         require_once "Views/navbarLogged.php";
-    else :
-        header('Location:' . constant('URL') . 'main');
-        require_once "Views/navbar.php";
-    endif;
 
     ?>
     <!--  -------TERMINA EL NAV--------  -->
-
-    <!-- ----------HEADER  -PORTADA PRESENTACIÓN------------- -->
-
     <header>
 
     </header>
@@ -31,8 +24,6 @@
         <main id="centerMain">
 
             <span class="clearfix"></span>
-
-            <br><br>
             <br>
             <div class="row">
 
@@ -50,7 +41,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="exampleModalLongTitle">Registro</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="location.reload();">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
@@ -58,7 +49,7 @@
                                         <h5><?php echo $this->message; ?></h5>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Close</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true" onclick="location.reload();">Close</button>
                                     </div>
                                 </div>
                             </div>
@@ -138,7 +129,7 @@
                             </form>
                         </div>
                     </div><!-- acaba el insertar usuario-->
-                    <table class="table table-responsive">
+                    <table class="table">
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">idUsuario</th>
@@ -259,41 +250,62 @@
                             </tbody>
                         <?php endforeach; ?>
                     </table>
-                <?php else : ?>
+                <?php else : ?> <!-- usuario común registrado -->
+                     <!-- empieza el modal -->
+                        <div class="modal fade" id="modifyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Registro</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="location.reload();">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body" id="message">
+                                        <h5><?php echo $this->message; ?></h5>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true" onclick="location.reload();">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- termina el modal -->
                     <!-- Usuario  - modificar sus datos -->
-                    <form method="POST" action="<?php echo constant('URL'); ?>userdata/modifyUserData">
+                    <form method="POST" id="modficarDatos" action="">
                         <div class="center">
                             <h5><?php echo $this->message; ?></h5>
                         </div>
                         <div class="form-group row">
 
+                            <input type="hidden" class="form-control" id="idUser" name="idUser" value="<?php echo $_SESSION['idUser']; ?>">
                             <label for="inputUser" class="col-sm-4 col-form-label">Usuario</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="usr" name="usr" value="<?php echo $_SESSION['usr']; ?>">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-4 col-form-label">Nombre</label>
+                            <label for="inputName" class="col-sm-4 col-form-label">Nombre</label>
                             <div class="col-sm-8">
                                 <input type="tex" class="form-control" id="nom" name="nom" value="<?php echo $_SESSION['nom']; ?>">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-4 col-form-label">Apellidos</label>
+                            <label for="inputApe" class="col-sm-4 col-form-label">Apellidos</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="ape" name="ape" value="<?php echo $_SESSION['ape']; ?>">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-4 col-form-label">Email</label>
+                            <label for="inputEmail" class="col-sm-4 col-form-label">Email</label>
                             <div class="col-sm-8">
                                 <input type="email" class="form-control" id="ema" name="ema" placeholder="Email" value="<?php echo $_SESSION['ema']; ?>">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputPassword3" class="col-sm-4 col-form-label">Password</label>
+                            <label for="inputPassword" class="col-sm-4 col-form-label">Password</label>
                             <div class="col-sm-8">
-                                <input type="password" class="form-control" id="disabledInput" placeholder="*****" disabled>
+                                <input type="" class="form-control" id="disabledInput" placeholder="*****" disabled>
                             </div>
                         </div>
 
@@ -317,13 +329,13 @@
                             </div>
                         </fieldset>
                         <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-4 col-form-label">Altura</label>
+                            <label for="inputAltura" class="col-sm-4 col-form-label">Altura</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="alt" name="alt" placeholder="Altura en metros" value="<?php echo $_SESSION['alt']; ?>">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-4 col-form-label">Peso</label>
+                            <label for="inputPeso" class="col-sm-4 col-form-label">Peso</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="peso" name="peso" placeholder="Peso en kg" value="<?php echo $_SESSION['peso']; ?>">
                             </div>
@@ -349,13 +361,16 @@
 
     <br><br>
 
-
     <br>
     </main>
 
     </div>
     <?php require_once 'Views/footer.php'  ?>
-
+      <?php
+  else :
+ header('Location:'. constant('URL'). 'errores');
+    endif; // cierro el if que comprueba si el usuario está logueado
+?>
 </body>
 
 </html>

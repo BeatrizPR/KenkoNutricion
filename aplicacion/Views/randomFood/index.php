@@ -6,7 +6,7 @@
 
         require_once './vendor/autoload.php';
     ?>
-    <script src='<?php echo constant('URL'); ?>/public/js/ramdonFood.js'></script>
+    <script src='<?php echo constant('URL'); ?>public/js/ramdonFood.js'></script>
 </head>
 
 <body>
@@ -35,14 +35,11 @@
 
     </header>
     <!-- -------------MAIN--------------- -->
-    <!--<div class="container"> -->
     <div class="container mx-auto">
         <main id="centerMain">
 
             <span class="clearfix"></span>
-
             <br>
-            <!-------  METER AQUI UN BUSCADOR DE ALIMENTOSSS      ------>
             <br>
             <div class="row">
 
@@ -53,7 +50,7 @@
                 </div>
                 <div class=" mx-auto">
                     <div class="col">
-                      	<img id="photo"  class="rounded mx-auto d-block randomImage" >
+                        <img id="photo" src="" class="rounded mx-auto d-block" alt=" " style="width:40%; height:40%;">
                         <br><br>
                         <button type="button" class="btn btn-outline-secundary mx-auto d-block" onclick="getRandomToEat()">Pulsa para tener una comida al azar</button>
                         <br>
@@ -66,7 +63,7 @@
                     </div>
                     <p>Desayunos elegir entre los alimentos dados:</p>
 
-                    <table class="table table-hover table-responsive">
+                    <table class="table table-hover">
                         <thead>
                             <tr class="menuGreen">
                                 <th scope="col"></th>
@@ -114,7 +111,7 @@
                         <h3 class="titulo">Menu vegetariano</h3>
                     </div>
                     <p>Desayunos elegir entre los alimentos dados:</p>
-                    <table class="table table-hover table-responsive">
+                    <table class="table table-hover">
                         <thead>
                             <tr class="menuGreen">
                                 <th scope="col"></th>
@@ -162,7 +159,7 @@
                     <div class="col-lg-12 text-center">
                     <h3 class="titulo">Menu sin lactosa</h3>
                     </div>
-                    <table class="table table-hover table-responsive">
+                    <table class="table table-hover">
                         <thead>
                             <tr class="menuGreen">
                                 <th scope="col"></th>
@@ -214,10 +211,9 @@
 
                     <a href="<?php echo constant('URL').'pdfgenerator'?>" target="_blanck"><button class="btn m-3">Descargar menus en pdf</button></a>
 
-                   
-
                 </div>
             </div>
+            <!--cierro div class row-->
             <br><br>
             <br>
         </main>

@@ -182,6 +182,97 @@ $( document ).ready(function() {
 
 });
 
+//validar cuando un usuario modifica sus datos
+
+$( document ).ready(function() {
+    $("#modficarDatos").submit(function(e) {
+        e.preventDefault();
+        }).validate({
+        debug: false,
+        rules: {
+            usr:{
+               required:true
+            },
+            nom: {
+            required: true,
+            rangelength: [2,50],
+            lettersonly: true
+            },
+            ape: {
+            required: true,
+            lettersonly:true
+            },
+            ema: {
+            required: true,
+            email: true,
+            correctemail: true
+            },
+            pwd: {
+            required: true,
+            minlength: 5,
+            maxlength: 20,
+            correctPass: true
+            },
+            peso:{
+                number: true
+            },
+            alt:{
+                number: true
+            }
+        },
+        messages: {
+            usr:{
+                required: "<small style='color:red'>Debes introducir un usuario</small>"
+            },
+            nom: {
+            required: "<small style='color:red'>El nombre es obligatorio</small>",
+            rangelength: "<small style='color:red'>Debe tener entre 2 y 50 caracteres</small>",
+            },
+            ape: {
+            required: "<small style='color:red'>El apellido es obligatorio.</small>"
+            },
+            ema: {
+            required: "<small style='color:red'>El correo electrónico es obligatorio.</small>",
+            email: "<small style='color:red'>Introduce un correo que sea válido</small>"
+            },
+            pwd: {
+            required: "<small style='color:red'>Introduce una contraseña (5-20 dígitos).</small>",
+            minlength: "<small style='color:red'>Debe contener mínimo 5 dígitos o caracteres.</small>",
+            maxlength:"<small style='color:red'>Debe contener 20 dígitos o caracteres como máximo.</small>"
+            },
+            peso:{
+                number: "<small style='color:red'>El peso debe ser numérico</small>"
+            },
+            alt:{
+                number: "<small style='color:red'>La altura debe ser numérica</small>"
+            }
+        },
+        submitHandler : function(){
+            var dataRegister = $("#modficarDatos").serialize();
+            $.ajax({
+            cache : false,
+            url : URL+'userdata/modifyUserData',
+            data : dataRegister,
+            type : 'POST',
+            dataType : 'json',
+            }).done(function(data){
+                    
+                    var output = "<h1>" + data["message"] + "</h1>";
+                    $("#message").html(output);
+                    $("#modifyModal").modal('show');
+                    console.log( "La solicitud se ha completado correctamente." );
+                    $("#modifyModal").modal('hide');
+            }).fail( function(){
+                console.log( "Algo ha fallado" );
+            });
+        
+        }
+
+
+    });
+
+});
+
 // Validate mail message
 
 $( document ).ready(function() {
@@ -237,6 +328,7 @@ $( document ).ready(function() {
                     $("#emailModal").modal('show');
                     console.log( "La solicitud se ha completado correctamente." );
                     $("#emailModal").modal('hide');
+
             }).fail( function(){
                 console.log( "Algo ha fallado" );
             });

@@ -169,7 +169,7 @@
 
 
     // Define a default Landscape page size/format by name
-    $mpdf = new /Mpdf/Mpdf(['mode' => 'utf-8', 'format' => 'A4-L']);
+    $mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => 'A4-L']);
     $mpdf->WriteHTML($table);
     //$mpdf->shrink_tables_to_fit = 1;
     $mpdf->Output();

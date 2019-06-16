@@ -10,7 +10,7 @@ function foodList(valor, pagina) {
 		//Imprimimos los registro en nuestra Table
 		var items = eval(d[0]);
 		//console.log(items);
-		html = "<table class='table table-bordered table-responsive'><thead><tr><th>#</th><th>nombreAli</th><th>calorias</th><th>nombreCat</th><th>proteinas</th><th>hidratosCarbono</th><th>lipidos</th><th>fibra</th></tr></thead><tbody>";
+		html = "<table class='table table-bordered'><thead><tr><th>#</th><th>nombreAli</th><th>calorias</th><th>nombreCat</th><th>proteinas</th><th>hidratosCarbono</th><th>lipidos</th><th>fibra</th></tr></thead><tbody>";
 		for (i = 0; i < items.length; i++) {
 			datos = items[i][0] + "*" + items[i][1] + "*" + items[i][2] + "*" + items[i][3] + "*" + items[i][4] + "*" + items[i][5] + "*" + items[i][6] + "*" + items[i][7];
 

@@ -36,13 +36,20 @@ class UserdataModel extends Model{
     }
 
 
-    public function updateDataUser($userModify)
+
+    public function updateDataUser($userDataModi)
     {
-        $query = $this->db->connect()->prepare("UPDATE usuario SET usuario = :usuario, nombre = :nombre, apellidos = :apellido, email = :email, sexo = :sexo, altura = :altura, peso = :peso WHERE idUsuario = :idUsuario");
+        $query = $this->db->connect()->prepare("UPDATE usuario SET usuario = :usr, nombre = :nom, apellidos = :ape, email = :ema, sexo = :sex, altura = :alt, peso = :peso WHERE idUsuario = :idUser");
         try {
             $query->execute([
-                'usuario' => $userModify['usr'], 'nombre' => $userModify['nom'], 'apellido' => $userModify['ape'], 'email' => $userModify['ema'], 
-                'sexo' => $userModify['sex'], 'altura' => $userModify['alt'], 'peso' => $userModify['peso'],'idUsuario' => $userModify['idUser']
+                'usr' => $userDataModi['usr'], 
+                'nom' => $userDataModi['nom'], 
+                'ape' => $userDataModi['ape'], 
+                'ema' => $userDataModi['ema'], 
+                'sex' => $userDataModi['sex'], 
+                'alt' => $userDataModi['alt'], 
+                'peso' => $userDataModi['peso'],
+                'idUser' => $userDataModi['idUser']
             ]);
             return true;
         } catch (PDOException $error) {

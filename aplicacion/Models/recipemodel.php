@@ -45,8 +45,6 @@ class recipeModel extends Model
 
             return true;
         } catch (PDOException $error) {
-            //echo $error->getMessage();
-            //echo 'ERROR. Dato incorrecto';
             return false;
         }
     }

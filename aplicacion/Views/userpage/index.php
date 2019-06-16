@@ -12,10 +12,6 @@
 
     if (isset($_SESSION['usr'])) :
         require_once "Views/navbarLogged.php";
-    else :
-        header('Location:' . constant('URL') . 'main');
-        require_once "Views/navbar.php";
-    endif;
 
     ?>
     <!--  -------TERMINA EL NAV--------  -->
@@ -127,7 +123,11 @@
 
     </div>
     <?php require_once 'Views/footer.php'  ?>
-
+  <?php
+  else :
+ header('Location:'. constant('URL'). 'errores');
+    endif; // cierro el if que comprueba si el usuario está logueado
+?>
 </body>
 
 </html>

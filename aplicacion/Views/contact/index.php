@@ -10,6 +10,7 @@
 	<!-- --------MENU SUPERIOR--------- -->
 	<?php
 
+	//session_start();
 	if (isset($_SESSION['usr'])) :
 		require_once "Views/navbarLogged.php";
 	else :
@@ -45,7 +46,9 @@
 							</button>
 						</div>
 						<div class="modal-body" id="message">
+
 							<h5><?php echo $this->message; ?></h5>
+
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Close</button>

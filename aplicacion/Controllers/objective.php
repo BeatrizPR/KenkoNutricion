@@ -27,7 +27,6 @@ class Objective extends Controller{
 
     // todos los objetivos
     function createTotalChartObj(){
-        //$goal = $_POST['goalId'];
         $month = $_POST['month'];
         $year = $_POST['year'];
         $data = $this->model->getTotalObjectChart(['idUs' => $_SESSION['idUser'],'year' => $year, 'month' => $month]);

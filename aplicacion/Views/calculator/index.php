@@ -50,7 +50,6 @@
 								</button>
 							</div>
 							<div class="modal-body" id="message">
-
                                 <?php echo $this->message; ?>
 							</div>
 							<div class="modal-footer">
@@ -132,11 +131,6 @@
 
                 </div>
                 
-
-
-
-
-
             </div><!--cierro div class row-->
             <br><br>
             <hr>
@@ -188,7 +182,7 @@
                         </div> <!-- cierra div collapse-->
                     </div> 
                 </div><!-- cierra col-md-6 del formulario-->
-                
+
             <br>
         </main>
 

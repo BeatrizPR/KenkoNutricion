@@ -1,9 +1,11 @@
+<?php
+//session_start();
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <?php require_once 'Views/header.php' ?>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js" integrity="sha256-JG6hsuMjFnQ2spWq0UiaDRJBaarzhFbUxiUTxQDA9Lk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js" integrity="sha256-J2sc79NPV/osLcIpzL3K8uJyAD7T5gaEFKlLDM18oxY=" crossorigin="anonymous"></script>
@@ -54,8 +56,6 @@
                             $objective = new Objectivetotal();
                             $objective = $row;
                             ?>
-                            <!-- <input class="form-check-input hiden" type="checkbox" name="exampleCheckbox1" id="exampleCheckbox1" value="option1"> -->
-                            <!-- <input class="form-check-input" type="hidden" name="idObj" id="checkboxGoal" value="<?php //echo $objective->idObj; ?> "> -->
                             <br>
                             
                             <input class="form-check-input" type="checkbox" name="checkboxGoal[]" id="checkboxGoal" value="<?php echo $objective->idObj; ?> ">
@@ -147,6 +147,7 @@
 
 
                     </div>
+                    <!--cierro div row-->
                 </form>
                 <br>
                 <div>                
@@ -157,8 +158,6 @@
                     <div id="chart-container2" class="chartContainer1">
                     <canvas id="myChart"></canvas>
                     </div>
-
-                  
                 </div>
                 <hr>
                 <br>
@@ -176,7 +175,7 @@
                                 <th scope="col">Fecha</th>
                                 <th scope="col">Objetivo</th>
                                 <th scope="col">Cumplido</th>
-    
+
                             </tr>
                         </thead>
                         <tbody>
@@ -190,7 +189,7 @@
                                     <th scope="row"><?php echo $goal->fecha ?></th>
                                     <td><?php echo $goal->nombreObj ?></td>
                                     <td><?php echo $goal->cumplido ?></td>
-
+                                   
                                     <td class="noBorder"><button class="btn" type="button" data-toggle="collapse" data-target="#example<?php echo $goal->idObjPersonal; ?>" aria-expanded="false" aria-controls="change" value="<?php echo $recipelist->idReceta; ?>"><i class="fa fa-trash"></i></button></td>
 
                                 </tr>
@@ -225,11 +224,11 @@
    
 
     </html>
-   
+    
 <?php
 // else id user not loged, can't acces to that page
 else :
-    header('Location:' . constant('URL') . 'error');
+    header('Location:' . constant('URL') . 'errores');
 
 endif;
 

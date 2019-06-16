@@ -34,10 +34,7 @@
         <main id="centerMain">
 
             <span class="clearfix"></span>
-
-            <br>
-
-            
+            <br>          
             <br>
             <div class="row justify-content-center">
                 
@@ -45,6 +42,7 @@
                     <h2 class="titulo">Mis recetas</h2>
                     <br />
                 </div>
+                <!-- OBTENGO 4 RECETAS POR CADA PAGINA  -->
                 <?php foreach ($this->recipelist as $row) :
                     $recipelist = new Foodrecipe();
                     $recipelist = $row;
@@ -88,12 +86,7 @@
                 <?php endforeach ?>
             </div>
             <!--cierro div class row-->
-
-
-            <br>
-
-            <br>
-           
+            <br><br>     
         </main>
 
         <footer class="page-footer font-small blue">

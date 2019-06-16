@@ -31,7 +31,6 @@
 
     </header>
     <!-- -------------MAIN--------------- -->
-    <!--<div class="container"> -->
     <div class="container mx-auto">
         <main id="centerMain">
 
@@ -64,7 +63,6 @@
                     <label class="col-md-4 col-form-label">Elaboración: </label>
                     <div class="col-md-8">
                         <textarea class="form-control" name="descripcion" placeholder="Elaboración" required></textarea>
-
                     </div>
                 </div>
                 <button type="submit" class="btn ">Anadir nueva receta</button>
@@ -82,6 +80,7 @@
                     <h2 class="titulo">Recetas</h2>
                     <br />
                 </div>
+                <!-- OBTENGO 4 RECETAS POR CADA PAGINA  -->
                 <?php foreach ($this->recipe as $row) :
                     $recipe = new Recipe();
                     $recipe = $row;

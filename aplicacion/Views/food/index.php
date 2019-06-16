@@ -9,6 +9,7 @@
 <body onload="foodList('','1');">
 	<!-- --------MENU SUPERIOR--------- -->
 	<?php
+	//session_start();
 	if (isset($_SESSION['usr'])) :
 		require_once "Views/navbarLogged.php";
 	else :
@@ -28,10 +29,13 @@
 
 	</header>
 	<!-- -------------MAIN--------------- -->
+	<!--<div class="container"> -->
 	<div class="container mx-auto">
 		<main id="centerMain">
 
 			<span class="clearfix"></span>
+
+			<br>
 
 			<br>
 			<div class="row">
@@ -61,6 +65,7 @@
 
 
 			</div>
+			<!--cierro div class row-->
 
 			<br>
 
