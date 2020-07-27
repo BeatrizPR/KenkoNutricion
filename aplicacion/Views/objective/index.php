@@ -198,7 +198,7 @@
                                         <div class="collapse" id="example<?php echo $goal->idObjPersonal; ?>">
                                             <div class="card card-body">
                                                 <!--confirmación para borrar la receta-->
-                                                <h2 class="titulo col-md-12 text-center">¿Quieres borrar la receta?</h2>
+                                                <h2 class="titulo col-md-12 text-center">¿Quieres borrar el objetivo?</h2>
                                                 <br>
                                                 <div class="col-12 col-md-8 col-lg-12   text-center">
                                                     <a href="<?php echo constant('URL') . 'objective/removeObjective/' . $goal->idObjPersonal; ?>"><button class="btn btn-borrar m-3">Eliminar</button></a>
